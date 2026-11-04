@@ -62,6 +62,7 @@ Como parâmetro internacional de excelência regulatória e tecnológica, utiliz
 Durante a fase de atracação (*hotelling*), os navios mantêm seus motores auxiliares a diesel ligados ininterruptamente para suprir sistemas de refrigeração, bombas de descarga de carga líquida, iluminação, guindastes e hotelaria de bordo. Essa queima contínua de combustível fóssil gera elevados volumes de gases de efeito estufa (CO₂) e poluentes atmosféricos locais (NOₓ, SOₓ e Material Particulado - PM2,5 e PM10), afetando diretamente as comunidades urbanas lindeiras aos portos de Santos e Suape.
 
 O *Cold Ironing* viabiliza o desligamento dos geradores auxiliares a diesel mediante a conexão física do navio à rede elétrica de terra. No Brasil, o benefício ambiental é potencializado pela matriz elétrica do **Sistema Interligado Nacional (SIN)**, predominantemente renovável (fator médio de apenas 0,08 kg CO₂/kWh, contra 690 g CO₂/kWh da queima de óleo diesel marítimo).
+
 ---
 
 ## 📁 2. Estrutura do Repositório
