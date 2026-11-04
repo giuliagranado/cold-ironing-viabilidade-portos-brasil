@@ -172,12 +172,12 @@ Baseada no documento [`Matriz de indicadores`](docs/Matriz%20de%20indicadores%20
 ### Estimativa de Potência e Demanda Elétrica
 
 As fórmulas ativas na aba `Análise por Escala` da planilha calculam dinamicamente:
-* **Demanda Média por Navio**: $\text{Potência Auxiliar (kW)} \times \text{Fator de Carga}$
-* **Consumo de Energia**: $\text{Demanda Média (kW)} \times \text{Horas no Cais (h)}$
-* **Emissão com Diesel**: $\text{Consumo (kWh)} \times \frac{690\text{ g/kWh}}{1.000.000}$
-* **Emissão com Rede**: $\text{Consumo (kWh)} \times \frac{0,08\text{ kg/kWh}}{1.000}$
-* **$\text{CO}_2$ Evitado**: $\text{Emissão Diesel} - \text{Emissão Rede}$
-* **Custo da Energia Elétrica**: $\text{Consumo (kWh)} \times \text{Tarifa Portuária (R\$\,0,75/kWh)}$
+* **Demanda Média por Navio**: Potência Auxiliar (kW) × Fator de Carga
+* **Consumo de Energia**: Demanda Média (kW) × Horas no Cais (h)
+* **Emissão com Diesel (tCO₂)**: Consumo (kWh) × Fator de Emissão do Diesel (690 gCO₂/kWh)
+* **Emissão com Rede (tCO₂)**: Consumo (kWh) × Fator de Emissão da Rede Elétrica (0,08 kgCO₂/kWh)
+* **CO₂ Evitado (tCO₂)**: Emissão com Diesel − Emissão com Rede
+* **Custo da Energia Elétrica**: Consumo (kWh) × Tarifa Portuária (R$ 0,75/kWh)
 
 ---
 
