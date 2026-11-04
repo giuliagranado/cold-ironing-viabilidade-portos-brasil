@@ -85,8 +85,7 @@ cold-ironing-viabilidade-portos-brasil/
 └── docs/                                    # Artigos, banners e relatórios acadêmicos do projeto
     ├── banner_cold_ironing.pdf              # Banner acadêmico apresentado em evento científico
     ├── banner_cold_ironing_editavel.docx    # Conteúdo integral e fontes do banner acadêmico
-    ├── Matriz de indicadores – Cold ironing Los Angeles × Santos × Suape (Completa).docx
-    └── relatorio_cientifico_emissoes_navios (1).docx
+    └── Matriz de indicadores – Cold ironing Los Angeles × Santos × Suape (Completa).docx
 ```
 
 ---
@@ -216,7 +215,6 @@ As fórmulas ativas na aba `Análise por Escala` da planilha calculam dinamicame
 Os arquivos originais de pesquisa encontram-se arquivados no diretório [`docs/`](docs/):
 - **`banner_cold_ironing.pdf`**: Banner acadêmico com resumo gráfico e conclusões.
 - **`Matriz de indicadores – Cold ironing Los Angeles × Santos × Suape (Completa).docx`**: Matriz analítica aprofundada comparando os três portos.
-- **`relatorio_cientifico_emissoes_navios (1).docx`**: Análise estatística de emissões navais e impacto econômico (2020–2025).
 
 ---
 
