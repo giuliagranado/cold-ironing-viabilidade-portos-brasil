@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Logs
+execucao.log
+*.log
+
+# Temporary scripts
+populate_wikidata_cache.py
+retry_missing.py
+test_*.py
+test_*.xlsx
+
+# Jupyter
+.ipynb_checkpoints/
