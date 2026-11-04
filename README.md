@@ -59,10 +59,9 @@ Como parâmetro internacional de excelência regulatória e tecnológica, utiliz
 
 ### Contexto e Justificativa
 
-Durante a fase de atracação (*hotelling*), os navios mantêm seus motores auxiliares a diesel ligados ininterruptamente para suprir sistemas de refrigeração, bombas de descarga de carga líquida, iluminação, guindastes e hotelaria de bordo. Essa queima contínua de combustível fóssil gera elevados volumes de gases de efeito estufa ($\text{CO}_2$) e poluentes atmosféricos locais ($\text{NO}_x$, $\text{SO}_x$ e Material Particulado - $\text{PM}_{2.5}$ / $\text{PM}_{10}$), afetando diretamente as comunidades urbanas lindeiras aos portos de Santos e Suape.
+Durante a fase de atracação (*hotelling*), os navios mantêm seus motores auxiliares a diesel ligados ininterruptamente para suprir sistemas de refrigeração, bombas de descarga de carga líquida, iluminação, guindastes e hotelaria de bordo. Essa queima contínua de combustível fóssil gera elevados volumes de gases de efeito estufa (CO₂) e poluentes atmosféricos locais (NOₓ, SOₓ e Material Particulado - PM2,5 e PM10), afetando diretamente as comunidades urbanas lindeiras aos portos de Santos e Suape.
 
-O *Cold Ironing* viabiliza o desligamento dos geradores auxiliares a diesel mediante a conexão física do navio à rede elétrica de terra. No Brasil, o benefício ambiental é potencializado pela matriz elétrica do **Sistema Interligado Nacional (SIN)**, predominantemente renovável (fator médio de apenas $0,08\text{ kg CO}_2/\text{kWh}$, contra $690\text{ g CO}_2/\text{kWh}$ da queima de óleo diesel marítimo).
-
+O *Cold Ironing* viabiliza o desligamento dos geradores auxiliares a diesel mediante a conexão física do navio à rede elétrica de terra. No Brasil, o benefício ambiental é potencializado pela matriz elétrica do **Sistema Interligado Nacional (SIN)**, predominantemente renovável (fator médio de apenas 0,08 kg CO₂/kWh, contra 690 g CO₂/kWh da queima de óleo diesel marítimo).
 ---
 
 ## 📁 2. Estrutura do Repositório
