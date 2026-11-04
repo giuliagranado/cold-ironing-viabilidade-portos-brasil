@@ -26,9 +26,12 @@ import numpy as np
 import requests
 
 # ---------------------------------------------------------------------------
-# 1. Configuração de Logs
+# 1. Configuração de Diretórios e Logs
 # ---------------------------------------------------------------------------
-LOG_FILE = "execucao.log"
+SCRIPT_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent if SCRIPT_DIR.name == "scripts" else SCRIPT_DIR
+
+LOG_FILE = str(PROJECT_ROOT / "execucao.log")
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -241,10 +244,22 @@ def process_cold_ironing():
     logger.info("=" * 70)
 
     # Passo 1: Carregar arquivos de entrada (compatível com raiz e subpastas dados/ e output/)
-    file_santos = "dados/santos2022a2025.xlsx" if os.path.exists("dados/santos2022a2025.xlsx") else "santos2022a2025.xlsx"
-    file_suape = "dados/suape2022a2025.xlsx" if os.path.exists("dados/suape2022a2025.xlsx") else "suape2022a2025.xlsx"
-    model_file = "output/Modelo_Analise_Cold_Ironing_Santos.xlsx" if os.path.exists("output/Modelo_Analise_Cold_Ironing_Santos.xlsx") else "Modelo_Analise_Cold_Ironing_Santos.xlsx"
-    cache_file = "imo_cache.json"
+    file_santos = PROJECT_ROOT / "dados" / "santos2022a2025.xlsx"
+    if not file_santos.exists():
+        file_santos = PROJECT_ROOT / "santos2022a2025.xlsx"
+    file_santos = str(file_santos)
+
+    file_suape = PROJECT_ROOT / "dados" / "suape2022a2025.xlsx"
+    if not file_suape.exists():
+        file_suape = PROJECT_ROOT / "suape2022a2025.xlsx"
+    file_suape = str(file_suape)
+
+    model_file = PROJECT_ROOT / "output" / "Modelo_Analise_Cold_Ironing_Santos.xlsx"
+    if not model_file.exists():
+        model_file = PROJECT_ROOT / "Modelo_Analise_Cold_Ironing_Santos.xlsx"
+    model_file = str(model_file)
+
+    cache_file = str(PROJECT_ROOT / "imo_cache.json")
 
     if not os.path.exists(file_santos) or not os.path.exists(file_suape):
         logger.error(f"Arquivos de entrada não encontrados: {file_santos} ou {file_suape}")

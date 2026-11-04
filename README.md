@@ -72,8 +72,10 @@ cold-ironing-viabilidade-portos-brasil/
 ├── README.md                                # Documentação completa e relatório executivo
 ├── LICENSE                                  # Licença de código aberto (MIT)
 ├── requirements.txt                         # Dependências Python para execução do pipeline
-├── process_cold_ironing.py                  # Script ETL de automação, cálculos e modelagem Excel
 ├── imo_cache.json                           # Base persistida de 3.942 navios (consultada via Wikidata)
+│
+├── scripts/                                 # Pipeline de processamento e automação
+│   └── process_cold_ironing.py              # Script ETL de automação, cálculos e modelagem Excel
 │
 ├── dados/                                   # Bases de dados públicas oficiais de entrada (ANTAQ)
 │   ├── santos2022a2025.xlsx                 # 9.814 atracações do Porto de Santos (2022–2025)
@@ -96,7 +98,7 @@ O estudo baseou-se em uma abordagem mista, combinando levantamento bibliográfic
 
 ### Fluxo de Processamento (ETL)
 
-O script [`process_cold_ironing.py`](process_cold_ironing.py) foi construído em Python, estruturado em 8 etapas automatizadas:
+O script [`process_cold_ironing.py`](scripts/process_cold_ironing.py) foi construído em Python, estruturado em 8 etapas automatizadas:
 
 ```mermaid
 flowchart TD
@@ -201,7 +203,7 @@ As fórmulas ativas na aba `Análise por Escala` da planilha calculam dinamicame
 
 3. **Execute o pipeline completo de processamento:**
    ```bash
-   python process_cold_ironing.py
+   python scripts/process_cold_ironing.py
    ```
 
 4. **Verifique os resultados gerados:**
