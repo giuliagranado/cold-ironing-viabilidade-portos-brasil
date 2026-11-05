@@ -87,7 +87,8 @@ cold-ironing-viabilidade-portos-brasil/
 └── docs/                                    # Artigos, banners e relatórios acadêmicos do projeto
     ├── banner_cold_ironing.pdf              # Banner acadêmico apresentado em evento científico
     ├── banner_cold_ironing_editavel.docx    # Conteúdo integral e fontes do banner acadêmico
-    └── Matriz de indicadores – Cold ironing Los Angeles × Santos × Suape (Completa).docx
+    ├── Matriz de indicadores – Cold ironing Los Angeles × Santos × Suape (Completa).docx
+    └── enriquecimento_dados_imo.md          # Metodologia detalhada e query SPARQL de consulta dos navios
 ```
 
 ---
@@ -113,11 +114,14 @@ flowchart TD
 
 ### Enriquecimento Naval via IMO e Wikidata
 
-Para calcular a demanda energética real por atracação, foi necessário identificar as características físicas de cada embarcação (Arqueação Bruta - GT, Porte Bruto - DWT e Tipologia Naval):
-1. **Extração de Códigos IMO**: Identificados **4.821 números IMO únicos** nas operações entre 2022 e 2025.
-2. **Consultas SPARQL em Lote à Wikidata**: O script envia requisições em lotes via método `POST` ao endpoint SPARQL da Wikimedia, consultando a propriedade P792 (*IMO ship identification number*).
-3. **Persistência em Cache (`imo_cache.json`)**: **3.942 embarcações (81,8% do total)** foram cadastradas com nome oficial, arqueação bruta e tipologia, cobrindo **13.287 escalas (81,9% do tráfego portuário total)**.
-4. **Fallback Paramétrico**: As 879 embarcações restantes ou sem IMO foram tipificadas por cruzamento de regras heurísticas do berço e carga operada.
+Para calcular a demanda energética real por atracação, as características físicas de cada embarcação (Arqueação Bruta - GT, Porte Bruto - DWT e Tipologia Naval) foram enriquecidas a partir do código IMO:
+
+* **Fonte de Dados:** Base aberta e estruturada da **Wikidata** (*Wikimedia Foundation*), consultada via endpoint SPARQL público (`https://query.wikidata.org/sparql`) utilizando o identificador internacional [**P458**](https://www.wikidata.org/wiki/Property:P458) (*IMO ship identification number*).
+* **Como Funcionou:** O script realizou consultas relacionais em lote (lotes de 150 a 300 IMOs via requisições HTTP `POST`) para extrair nome registrado (`rdfs:label`), classe naval (`wdt:P31`), GT (`wdt:P1093`) e DWT (`wdt:P1117`), persistindo o resultado no arquivo [`imo_cache.json`](imo_cache.json).
+* **Resultados e Cobertura:** De **4.821 IMOs únicos**, **3.942 embarcações (81,8%)** foram identificadas com sucesso, cobrindo diretamente **13.287 escalas (81,9% do tráfego portuário total)**. As 879 embarcações restantes receberam parametrização padrão por *fallback* (CARB 2020 / IMO / EPA) pelo perfil do berço e carga.
+* **Justificativa Metodológica:** Optou-se pela Wikidata em vez de plataformas comerciais (*MarineTraffic*, *VesselFinder*) devido ao custo proibitivo de APIs proprietárias para consultas em massa e ao bloqueio por *rate limiting* e termos de serviço verificado no web scraping direto, garantindo conformidade acadêmica e **100% de reprodutibilidade aberta**.
+
+> 📖 **Documentação Completa & Código:** Para ver o script em Python com a query SPARQL bruta e detalhes técnicos adicionais, consulte o documento [`docs/enriquecimento_dados_imo.md`](docs/enriquecimento_dados_imo.md).
 
 ### Parâmetros Técnicos e Regulatórios (CARB / IMO / EPA)
 
@@ -217,6 +221,7 @@ As fórmulas ativas na aba `Análise por Escala` da planilha calculam dinamicame
 Os arquivos originais de pesquisa encontram-se arquivados no diretório [`docs/`](docs/):
 - **`banner_cold_ironing.pdf`**: Banner acadêmico com resumo gráfico e conclusões.
 - **`Matriz de indicadores – Cold ironing Los Angeles × Santos × Suape (Completa).docx`**: Matriz analítica aprofundada comparando os três portos.
+- **`enriquecimento_dados_imo.md`**: Metodologia detalhada, justificativa e código Python com query SPARQL para enriquecimento via Wikidata.
 
 ---
 
