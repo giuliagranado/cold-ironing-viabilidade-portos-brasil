@@ -1,8 +1,5 @@
 """
 Processamento e Enriquecimento de Dados para Análise de Cold Ironing (Santos e Suape)
-=====================================================================================
-Autor: Antigravity
-Data: 2026-11-03
 Descrição:
   Script em Python que consolida os dados de atracações portuárias de Santos e Suape,
   padroniza as informações de acordo com o modelo de análise de Cold Ironing / OPS,
