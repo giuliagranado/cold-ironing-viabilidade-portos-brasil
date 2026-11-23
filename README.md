@@ -74,6 +74,11 @@ cold-ironing-viabilidade-portos-brasil/
 ├── requirements.txt                         # Dependências Python para execução do pipeline
 ├── imo_cache.json                           # Base persistida de 3.942 navios (consultada via Wikidata)
 │
+├── dashboard/                               # Aplicação interativa de apoio à decisão (Single Page App)
+│   ├── cold-ironing-dashboard.html          # Dashboard executivo interativo em HTML5/CSS/JS
+│   ├── README.md                            # Documentação detalhada e galeria explicativa das telas
+│   └── img/                                 # Capturas de tela organizadas (dashboard_1 a 9)
+│
 ├── scripts/                                 # Pipeline de processamento e automação
 │   └── process_cold_ironing.py              # Script ETL de automação, cálculos e modelagem Excel
 │
@@ -84,9 +89,10 @@ cold-ironing-viabilidade-portos-brasil/
 ├── output/                                  # Saídas geradas pelo modelo computacional
 │   └── Modelo_Analise_Cold_Ironing_Santos.xlsx # Pasta de trabalho Excel com 16.231 linhas e fórmulas
 │
-└── docs/                                    # Artigos, banners e relatórios acadêmicos do projeto
-    ├── banner_cold_ironing.pdf              # Banner acadêmico apresentado em evento científico
-    ├── banner_cold_ironing_editavel.docx    # Conteúdo integral e fontes do banner acadêmico
+└── docs/                                    # Artigos, apresentações e relatórios acadêmicos do projeto
+    ├── Banner_Cnit_Cold_Ironing.pdf         # Banner acadêmico apresentado em evento científico (CNIT)
+    ├── Banner_Cnit_Cold_Ironing.pptx        # Apresentação do banner em formato editável
+    ├── Slides - Cold Ironing em Santos e Suape.pdf # Apresentação institucional de slides
     ├── Matriz de indicadores – Cold ironing Los Angeles × Santos × Suape (Completa).docx
     └── enriquecimento_dados_imo.md          # Metodologia detalhada e query SPARQL de consulta dos navios
 ```
@@ -219,9 +225,13 @@ As fórmulas ativas na aba `Análise por Escala` da planilha calculam dinamicame
 ## 📄 6. Documentos Acadêmicos Complementares
 
 Os arquivos originais de pesquisa encontram-se arquivados no diretório [`docs/`](docs/):
-- **`banner_cold_ironing.pdf`**: Banner acadêmico com resumo gráfico e conclusões.
+- **`Banner_Cnit_Cold_Ironing.pdf`**: Banner acadêmico com resumo gráfico e conclusões apresentado no CNIT.
+- **`Banner_Cnit_Cold_Ironing.pptx`**: Arquivo editável da apresentação do banner.
+- **`Slides - Cold Ironing em Santos e Suape.pdf`**: Apresentação de slides executiva com diagnóstico e indicadores.
 - **`Matriz de indicadores – Cold ironing Los Angeles × Santos × Suape (Completa).docx`**: Matriz analítica aprofundada comparando os três portos.
 - **`enriquecimento_dados_imo.md`**: Metodologia detalhada, justificativa e código Python com query SPARQL para enriquecimento via Wikidata.
+
+> 📊 **Dashboard Interativo:** Para explorar o painel web interativo de apoio à decisão, consulte a documentação e capturas de tela em [`dashboard/README.md`](dashboard/README.md) ou abra diretamente [`dashboard/cold-ironing-dashboard.html`](dashboard/cold-ironing-dashboard.html).
 
 ---
 
